@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { scale } from 'svelte/transition';
 
-	let viewMenu = false;
+	let viewMenu = true;
 	export let data: PageData;
 </script>
 
@@ -14,8 +15,8 @@
 		>
 		{#if viewMenu}
 			<div class="mt-5 flex gap-2 flex-wrap">
-				{#each data.games as game}
-					<div class="card px-8 py-5 max-w-xs">
+				{#each data.games as game, i}
+					<div class="card px-8 py-5 max-w-xs" in:scale={{ delay: i * 100 }}>
 						<h3>{game.name}</h3>
 						<p>{game.description}</p>
 						{#if game.available}

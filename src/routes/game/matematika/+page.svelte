@@ -40,8 +40,7 @@
 			<Stepper active={level} on:complete={handleNextLevel} buttonTextComplete="Next Level">
 				{#each { length: 3 } as _, i}
 					<Step index={i} buttonClassesBack="hidden">
-						<svelte:fragment slot="header"
-							><h4 class="font-bold">Level {$level + 1}</h4></svelte:fragment
+						<svelte:fragment slot="header"><h4 class="font-bold">Level {i + 1}</h4></svelte:fragment
 						>
 						<div>
 							<p>Jawablah pertanyaan dibawah ini dengan benar</p>
