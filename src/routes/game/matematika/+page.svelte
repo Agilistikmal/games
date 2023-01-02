@@ -30,6 +30,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Games - Matematika</title>
+</svelte:head>
+
 <section class="mt-5 max-w-screen-lg mx-auto">
 	<div>
 		<h2>Permainan Matematika</h2>
